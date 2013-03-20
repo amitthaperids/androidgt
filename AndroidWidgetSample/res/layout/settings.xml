@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/settingsLayout"
+    android:gravity="center_horizontal">
+    
+    <RelativeLayout 
+        android:id="@+id/headingLayout"
+        android:background="@drawable/header_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView 
+            android:id="@+id/headingText"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/settingsHeading"/>
+    </RelativeLayout>
+    <ScrollView 
+        android:id="@+id/scrollview01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/radioGroup"
+        android:layout_below="@+id/headingLayout">
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:id="@+id/tableLayout1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content">
+        
+        <TableRow 
+			android:id="@+id/tableRow1"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:padding="5dip">
+        	
+            <TextView
+            	android:id="@+id/receiver_name_label"            	
+            	android:text="@string/receiverLabel"
+            	android:textAppearance="?android:attr/textAppearanceSmall" />
+            
+            <EditText 
+                android:id="@+id/receiver_name" 
+            	android:singleLine="true"
+                android:hint="@string/receiverHint"/>
+            
+        </TableRow>
+        
+         <TableRow 
+			android:id="@+id/tableRow6"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:padding="5dip">
+        	
+            <TextView
+            	android:id="@+id/sender_name_label"            	
+            	android:text="@string/senderLabel"
+            	android:textAppearance="?android:attr/textAppearanceSmall" />
+            
+            <EditText 
+                android:id="@+id/sender_name" 
+            	android:singleLine="true"
+                android:hint="@string/senderHint"/>
+            
+        </TableRow>
+        
+         <TableRow 
+			android:id="@+id/tableRow2"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:padding="5dip">
+        	
+            <TextView
+            	android:id="@+id/receiver_number_label"            	
+            	android:text="@string/receiverNumberLabel"
+            	android:textAppearance="?android:attr/textAppearanceSmall" />
+            
+            <EditText 
+                android:id="@+id/receiver_number_hint"
+            	android:singleLine="true"
+                android:inputType="number" 
+                android:hint="@string/receiverNumberHint"/>            
+        </TableRow>
+        
+         <TableRow 
+			android:id="@+id/tableRow3"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:padding="5dip">        	
+            <TextView
+            	android:id="@+id/receiver_email_label"            	
+            	android:text="@string/receiverEmailLabel"
+            	android:textAppearance="?android:attr/textAppearanceSmall" />            
+            <EditText 
+                android:id="@+id/receiver_email_hint"
+            	android:singleLine="true"
+                android:inputType="textEmailAddress"
+                android:hint="@string/receiverEmailHint"/>            
+        </TableRow>
+        <TableRow 
+			android:id="@+id/tableRow4"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:padding="5dip">
+        	
+            <TextView
+            	android:id="@+id/receiver_timeInterval_label"            	
+            	android:text="@string/receivertimeIntervalLabel"
+            	android:textAppearance="?android:attr/textAppearanceSmall" />
+            
+            <EditText 
+                android:id="@+id/receiver_timeInterval_hint"
+            	android:singleLine="true"
+                android:inputType="number"
+                android:hint="@string/receivertimeIntervalHint"/>            
+        </TableRow>
+        <TableRow 
+			android:id="@+id/tableRow5"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:padding="5dip">        	
+            <TextView
+            	android:id="@+id/receiver_relation_label"            	
+            	android:text="@string/receiverrelationLabel"
+            	android:textAppearance="?android:attr/textAppearanceSmall" />
+            
+            <EditText 
+                android:id="@+id/receiver_relation_hint"
+            	android:singleLine="true"
+                android:hint="@string/relationHint"/>            
+        </TableRow>
+    </TableLayout> 
+    </ScrollView>
+    <RadioGroup
+    	android:id="@+id/radioGroup"            	
+        android:orientation="horizontal"        
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/saveSettings"
+        android:layout_centerHorizontal="true">
+        <RadioButton 
+        	android:id="@+id/activateApp"
+            android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+            android:text="@string/app_activate"/>
+		<RadioButton 
+        	android:id="@+id/deactivateApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:text="@string/app_deactivate"/>
+	</RadioGroup>
+	
+    <Button android:id="@+id/saveSettings"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/saveSettings"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
