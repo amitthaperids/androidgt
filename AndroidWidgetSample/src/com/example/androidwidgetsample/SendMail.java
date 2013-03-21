@@ -18,7 +18,7 @@ import javax.mail.internet.MimeMultipart;
 
 public class SendMail {
 	// public static final String MAIL_SERVER = "localhost";
-// Check the branch changes
+// Check the branch changes.
     private String toList;
     private String ccList;
     private String bccList;
